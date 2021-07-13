@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finish Setup</title>
+</head>
+
+<body>
+    <h2>Hello {{name}}!</h2>
+    <p>You've successfully connected your streamlabs account, now you need to configure Razorpay to let us know when you
+        receieve a payment.</p>
+    <p>Please add the following URL as a webhook endpoint on your Razorpay account.
+    <pre>{{razorpay_webhook_url}}</pre>
+    </p>
+</body>
+
+</html>
