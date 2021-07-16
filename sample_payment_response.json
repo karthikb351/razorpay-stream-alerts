@@ -1,0 +1,52 @@
+{
+    "entity": "event",
+    "account_id": "acc_9pTCFuKnw25bNb",
+    "event": "payment.captured",
+    "contains": [
+        "payment"
+    ],
+    "payload": {
+        "payment": {
+            "entity": {
+                "id": "pay_HYVBRtxI3nIZ1x",
+                "entity": "payment",
+                "amount": 20000,
+                "currency": "INR",
+                "status": "captured",
+                "order_id": "order_HYVB1IRQTLpfh3",
+                "invoice_id": null,
+                "international": false,
+                "method": "upi",
+                "amount_refunded": 0,
+                "refund_status": null,
+                "captured": true,
+                "description": null,
+                "card_id": null,
+                "bank": null,
+                "wallet": null,
+                "vpa": "success@razorpay",
+                "email": "xxx@gmail.com",
+                "contact": "+xxx",
+                "notes": {
+                    "email": "karthikb351@gmail.com",
+                    "phone": "xxxxx",
+                    "name": "Karthik Balakrishnan",
+                    "message": "Does this show on stream?"
+                },
+                "fee": 472,
+                "tax": 72,
+                "error_code": null,
+                "error_description": null,
+                "error_source": null,
+                "error_step": null,
+                "error_reason": null,
+                "acquirer_data": {
+                    "rrn": "858258521206",
+                    "upi_transaction_id": "C9FC74AA82AEF73C6E39340F55246986"
+                },
+                "created_at": 1626198255
+            }
+        }
+    },
+    "created_at": 1626198255
+}
