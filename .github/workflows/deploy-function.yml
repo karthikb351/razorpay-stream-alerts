@@ -1,0 +1,24 @@
+name: Deploy Cloud Function
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: google-github-actions/setup-gcloud@master
+        with:
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          project_id: razorpay-stream-alerts
+          export_default_credentials: true
+      - run: npm install
+      - run: npm run compile
+      - id: Deploy
+        uses: google-github-actions/deploy-cloud-functions@main
+        with:
+          name: rzpalerts
+          region: us-central1
+          runtime: nodejs14
+          env_vars: STREAMLABS_CLIENT_ID=${{ secrets.STREAMLABS_CLIENT_ID }},STREAMSLABS_CLIENT_SECRET=${{ secrets.STREAMSLABS_CLIENT_SECRET }},BASE_URL=${{ secrets.BASE_URL }},ENVIRONMENT=${{ secrets.ENVIRONMENT }}
